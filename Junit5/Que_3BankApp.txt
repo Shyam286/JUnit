@@ -1,0 +1,51 @@
+package com.junit.Assignment;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+public class BankApp {
+
+double balance;
+	
+	public BankApp (double balance) {
+		super();
+		this.balance = balance;
+	}
+
+	
+	void withdrawAmt(double withdraw) throws InsufficientFundsException {
+		
+		if(withdraw>balance)
+			throw new InsufficientFundsException("InsufficientFundsException");
+		
+		balance=balance-withdraw;
+		
+		System.out.println("Amount Withdrawn: "+withdraw);
+		System.out.println("Available Balance: "+balance);
+	}
+	
+	public static void main(String[] args) {
+		
+		BankApp  acc1=new BankApp (20000.00);
+
+		try {
+			acc1.withdrawAmt(20000.00);
+		} catch (InsufficientFundsException e) {
+		
+			e.printStackTrace();
+		}
+		
+	}
+
+}
+
+class InsufficientFundsException extends Exception {
+	
+	public InsufficientFundsException(String s) {
+		super(s);
+	}
+
+}
+
+
+

@@ -1,0 +1,17 @@
+package com.junit.Assignment;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class Que_3TestCases {
+	
+	@Test
+	void test() {
+		BankApp  acc=new BankApp (20000.00);
+		
+		assertThrows(InsufficientFundsException.class, ()->acc.withdrawAmt(21000.0));
+
+	}
+
+}
