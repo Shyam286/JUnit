@@ -1,0 +1,50 @@
+package com.generic.assignment;
+
+
+import java.util.HashSet;
+
+public class Employee {
+	
+//	private Integer id;
+//	private String name;
+//	private Integer Salary;
+//	private String Deparment;
+	private int id;
+	private String name;
+	private int salary;
+	private String department;
+	
+	//Employee e=new Employee();
+	
+	public Employee(){
+		this.id=id;
+		this.name=name;
+		this.salary=salary;
+		this.department=department;
+	}
+	
+	public int dispalyDetails(){
+		
+		return id;
+	}
+}
+
+
+package com.generic.assignment;
+
+import java.util.HashSet;
+import com.generic.assignment.Employee;
+public class EmployeeDetails {
+	public static void main(String[] args) {
+		Employee e=new Employee();
+		HashSet<e> ed=new HashSet<>(1,"shyam",50000,"IT");
+		ed.add
+		
+	}
+
+}
+
+
+
+
+
